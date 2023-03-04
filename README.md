@@ -2,6 +2,8 @@
 
 Python CLI to convert any string input into a unique 'identicon'.
 
+![alt text](austin-thumbnail.png) ![alt text](bailey-thumbnail.png) ![alt text](python-thumbnail.png)
+
 Usage
 ```
 python identicon/main.py Austin
@@ -12,12 +14,10 @@ Dependencies
 pip install pillow numpy argparse
 ```
 
-![alt text](austin-thumbnail.png) ![alt text](bailey-thumbnail.png) ![alt text](python-thumbnail.png)
-
 ## Project Requirements
 
-- Uniqueness: For any given input, the output image should be unique and unrelated to those of similar inputs. 
-- Scale: Generate and store a 'thumbnail' and 'avatar' size, for use in different contexts as needed. It is much easier to scale down an image as needed and keep it looking appealing, so best to go bigger.
+- Uniqueness: For any given input, the output image should be unique and not necessarily related to those of similar inputs. 
+- Scale: Generate and store a 'thumbnail' and 'avatar' size, for use in different contexts as needed. It is much easier to scale down an image rather than up and keep it looking appealing, so best to go bigger.
 - Appearance: Symmetry is what makes these images recognizable, so all identicons should be symmetrical. 
 
 ## Implementation
@@ -44,3 +44,5 @@ While it is theoretically possible to have duplicates for two separate inputs, t
 
 - While unlikely, it is possible to have an image whose foreground color is nearly white, and indistinguishable from the background. In this case, we could set a 'max' hexidecimal number that would be dark enough to be distinguishable.
 - Also highly unlikely, it is possible to have an image that is entirely or almost entirely background or foreground pixels, making for an output that is not appealing. In this case, we could throttle the number of 'on' or 'off' pixels, and flip some as needed. 
+- Could give the identicons more variation with other colors featured.
+- Customize background and foreground color.

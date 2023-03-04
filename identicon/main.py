@@ -14,7 +14,7 @@ parser.add_argument("-o", "--output_file_name", default="img")
 def hex_char_to_color(character, rgb_color):
     return rgb_color if ord(character) % 2 == 1 else BACKGROUND_COLOR
 
-# Generates the 8x8 mirrored array with color values. This iterates through every 4 items
+# Generates the 8x8 mirrored array with color values. This iterates through every 4 characters
 # in the hash and adds its own reversed value to itself, creating the mirroring effect. 
 def generate_pixel_array(hash, rgb_color):
     return [[hex_char_to_color(x, rgb_color) for x in hash[i:i+4] + hash[i:i+4][::-1]] for i in range (0, len(hash), 4)]       
